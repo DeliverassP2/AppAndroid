@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/llistat.css">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Llistat</title>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:history.back()"><i class="fas fa-backward"></i></a>
+                <h1>ENTREGUES</h1>
+        <div class="filtrador">
+            <div class="filtre">
+                <input type="text" id="codiPostal" name="codiPostal" placeholder="Filtrar per codi postal">
+            </div>
+            <button id="filtrar">FILTRAR</button>
+        </div>
+
+    </header>
+    <!-- <div class="entregues"> -->
+        <ul id="entrega" name="entrega"></ul>
+    <!-- </div> -->
+    <script src="cordova.js"></script>
+    <script src="js/appGeo.js"></script>
+    <script src="js/llistat.js"></script>
+</body>
+
+</html>
