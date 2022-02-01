@@ -28,13 +28,25 @@
             <input type="text" id="id_user" name="id_user" placeholder="Escriu el teu DNI..">
 
             <label for="lname">CONTRASENYA</label>
-            <input type="password" id="password" name="pwd" autocomplete="on" placeholder="Escriu la teva contrasenya..">
+            <input type="password" id="password" name="password" placeholder="Escriu la teva contrasenya..">
+
+            <label for="lname">NOM I COGNOMS</label>
+            <input type="text" id="nomCog" name="nomCog" placeholder="Escriu el nom i cognoms..">
+
+            <label for="lname">TELÈFON</label>
+            <input type="number" id="tel" name="tel" maxlength="" placeholder="Escriu el teu telèfon..">
+
+            <label for="lname">DIRECCIÓ</label>
+            <input type="text" id="dir" name="dir" placeholder="Escriu la teva direcció..">
+
+            <label for="lname">CODI POSTAL</label>
+            <input type="text" id="cp" name="cp" placeholder="Escriu el teu codi postal..">
+
             <div class="session">
-                <a href="registre.html">
-                    <input type="button" id="b2" value="REGISTRA'T">
+                <a href="index.html">
+                    <input type="button" id="b2" value="LOGUEJA'T">
                 </a>
-                <!-- <input type="button" id="loginButton" value="ACCEDIR"> -->
-                <button id="loginButton" onclick="loginCredencials()">Login</button>
+                <input type="button" id="b1" value="ACCEDIR" >
             </div>
         </form>
         <button id="myBtn"><i class="fas fa-universal-access"></i>ACCESSIBILITAT</button>
@@ -51,7 +63,7 @@
                     <button role="button" id="increasetext">
                         <span>AUGMENTAR</span>
                     </button>
-                    <br /><br /><br /><span class="titols_botons">MIDA DE LA FONT<br><br />
+                    <br /><br /><br /><span class="titols_botons">MIDA DE LA FONT<br /><br />
                         <button role="button" id="vision">
                             <span>TEMA CLAR</span>
                         </button>
@@ -67,9 +79,9 @@
 
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/registre.js"></script>
     <script src="js/accessibilitat.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </body>
 
 </html>

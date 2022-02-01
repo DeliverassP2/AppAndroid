@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6{
 
 body {
     padding: 0;
-    margin: 0;
+    margin-top: -70px;
     background: #eaeaea;
     color: #EEEEEE;
     text-align: center;
@@ -361,18 +361,62 @@ input[type=password], select {
     font-weight: 400;
     background-color: transparent;
 }
-input[type=button], #resettext, #increasetext {
-    width: 100%;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border-bottom: 1px solid #ccc !important;
+   color: black;
+   border-radius: 4px;
+   box-sizing: border-box;
+   border-color: transparent;
+   font-family: Maven Pro;
+   font-weight: 400;
+   background-color: transparent;
+   -moz-appearance: textfield;
+}
+
+.session{
+   width: 100%;
+   display: flex;
+   flex-wrap: nowrap;
+   margin-left: -15px;
+}
+
+#b1, #resettext, #increasetext {
+    width: 90%;
     background: rgb(167,26,18);
     background: linear-gradient(90deg, rgba(167,26,18,1) 0%, rgba(246,120,113,1) 75%);
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 14px 16px;
+    margin: 8px 2px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     font-family: Maven Pro;
+}
+
+#b2, #resettext, #increasetext {
+   width: 92%;
+   background: #F67871;
+   background: linear-gradient(90deg, #F67871 0%, rgba(167,26,18,1) 75%);
+   color: white;
+   padding: 14px 16px;
+   margin: 8px 2px;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-weight: bold;
+   font-family: Maven Pro;
 }
 
 input[type=button]:hover, #resettext:hover, #increasetext:hover {

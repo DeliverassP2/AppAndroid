@@ -29,11 +29,18 @@
       },
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-camera": {},
-      "phonegap-plugin-barcodescanner": {}
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-buildinfo": {},
+      "cordova-universal-links-plugin": {}
     },
     "platforms": [
       "android",
       "browser"
     ]
+  },
+  "dependencies": {
+    "cordova": "^11.0.0",
+    "cordova-plugin-buildinfo": "4.0.0",
+    "cordova-universal-links-plugin-fix": "1.2.1"
   }
 }

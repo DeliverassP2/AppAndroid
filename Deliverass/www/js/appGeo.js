@@ -23,7 +23,7 @@ function editar(){
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("id=" + parametres);
   alert("Entrega numero " + parametres + " realitzada correctament!");
-    location.reload();
+  location.reload();
 }
 
 function upload(){
