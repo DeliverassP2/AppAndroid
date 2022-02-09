@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/69fb3d2fdc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/pedido.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <header>
+        <a href="javascript:history.back()"><i class="fas fa-backward"></i></a>
+        <h1>NOVA COMANDA</h1>
+    </header>
+    <div class="card">
+        <div class="dades">
+            <form action="" method="post">
+                <div class="desde">
+                    <h2>DESDE</h2>
+                    <input type="search" placeholder="D'on sortirà" name="desdeP" id="desdeP" list="paisos">
+                    <input type="text" placeholder="Població i carrer..." name="pobD" id="pobD">
+                </div>
+                <div class="fins">
+                    <h2>FINS A</h2>
+                    <input type="search" placeholder="On arribarà" name="finsP" id="finsP" list="paisos">
+                    <input type="text" placeholder="Població i carrer..." name="pobF" id="pobF">
+                </div>
+                <div class="pes">
+                    <h2>PES</h2>
+                    <input type="number" name="pes" id="pes">
+                </div>
+                <div class="dimensions">
+                    <h2>DIMENSIONS (cm)</h2>
+                    <input type="number" name="llarg" id="llarg" placeholder="LLARG" step="0.01" min="0" max="10">
+                    <input type="number" name="alt" id="alt" placeholder="ALTURA" step="0.01" min="0" max="10">
+                    <input type="number" name="ample" id="ample" placeholder="AMPLE" step="0.01" min="0" max="10">
+                </div>
+
+                <div class="res">
+                    <input type="checkbox" name="res" id="res">
+                    <p>
+                        Accepto les Condicions del servei i la Política de privacitat de Deliverass.
+                    </p>
+                </div>
+                <input type="submit" name="confirmar" id="confirmar" value="CONFIRMAR">
+            </form>
+
+            <datalist id="paisos">
+                <option value="Lleida">
+                <option value="Barcelona">
+                <option value="Tarragona">
+                <option value="Girona">
+            </datalist>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
