@@ -11,7 +11,7 @@ function inici() {
             lecturaxml(this);
         }
     };
-    xhttp.open("GET", "http://192.168.1.20/" + date + "/arxiu" + date + ".xml", true);
+    xhttp.open("GET", "http://192.168.1.203/" + date + "/arxiu" + date + ".xml", true);
     xhttp.send();
 }
 

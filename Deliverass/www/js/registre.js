@@ -1,23 +1,33 @@
-function registreCredencials() {
-    var id = document.getElementById("id_user").textContent;
-    var password = document.getElementById("password").textContent;
-    var nomCog = document.getElementById("nomCog").textContent;
-    var tel = document.getElementById("tel").textContent;
-    var dir = document.getElementById("dir").textContent;
-    var cp = document.getElementById("cp").textContent;
+$(document).ready(function() {
+    $("#b1").click(function() {
+        var id = $("#id_user").val();
+        var pwd = $("#password").val();
+        var nomCog = $("#nomCog").val();
+        if ($.trim(id).length > 0 && $.trim(pwd).length > 0 && $.trim(nomCog).length > 0) {
+            event.preventDefault();
+            $.ajax({
+                type: "POST",
+                crossDomain: true,
+                url: "http://192.168.1.203/registre.php",
+                data: {
+                    id_user: id,
+                    password: pwd,
+                    nomCog: nomCog
+                },
+                cache: false,
+                success: function(data) {
 
-    enviarRegistre(id, password, nomCog, tel, dir, cp);
-}
+                    if (data == "success") {
+                        alert("Registre correcte!");
+                        window.open('index.html');
+                    } else {
+                        alert("Usuari ja registrat!");
 
-function enviarRegistre(id, pwd, nomCog, tel, dir, cp) {
-    $.post("http://192.168.1.203/registre.php", {id: id, password: pwd, nomCog: nomCog, tel: tel, dir: dir, cp: cp}, 
-    function(response) {
-        if (response.result == true) {
-            alert("Registre correcte");
-            window.open("index.html");
-        }else if (response.result == false) {
-            alert("Error");
+                    }
+                }
+            })
+        } else {
+            alert("Please fill all fields.");
         }
-    }, 'json');
-}
-    
+    })
+})

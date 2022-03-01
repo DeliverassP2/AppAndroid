@@ -15,35 +15,34 @@
 
 <body>
     <header>
-        <a href="javascript:history.back()"><i class="fas fa-backward"></i></a>
-        <h1>PERFIL</h1>
+        <h1 style="margin-left: 30px;">PERFIL</h1>
     </header>
     <div class="card">
-        <div class="dades">
-            <div class="info">
-                <h2>DADES PERSONALS</h2>
-                <h3>Nombre: </h3>
-                <p>DNI: </p>
-                <p>Dirección: </p>
-                <p>Codi Postal: </p>
-                <p>Teléfono: </p>
-            </div>
-        </div>
-
-        <div class="pedidos">
-            <h2>LES MEVES COMANDES</h2>
-            <div class="comanda">
-                <h3>COMANDA 1 ID: </h3>
-                <p>Data: </p>
-                <input type="button" name="seguiment" id="seguiment" value="SEGUIMENT">
-            </div>
-        </div>
-
         <div class="nou">
             <a href="pedido.html"><input type="button" name="nouPedido" id="nouPedido" value="NOU PEDIDO"></a>
         </div>
+        <div class="dades">
+            <div class="info">
+                <h2>DADES PERSONALS</h2>
+                <h3 id="dni">DNI: </h3>
+
+            </div>
+
+
+            <div name="pedidos" class="pedidos">
+                <h2>LES MEVES COMANDES</h2>
+            </div>
+        </div>
+
 
     </div>
+
+    <script>
+        document.getElementById("dni").innerHTML += localStorage.getItem("id");
+    </script>
+    <script src="cordova.js"></script>
+    <script src="js/pedidoCli.js"></script>
+    <script src="js/seguiment.js"></script>
 </body>
 
 </html>

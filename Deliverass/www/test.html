@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="js/accessibilitat.js"></script>
+    <script src="https://kit.fontawesome.com/69fb3d2fdc.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#sub").click(function() {
+                var firstname = $("#name").val();
+                var lastname = $("#last").val();
+                if ($.trim(firstname).length > 0 && $.trim(lastname).length > 0) {
+                    $.ajax({
+                        type: "POST",
+                        crossDomain: true,
+                        url: "http://192.168.1.203/test.php",
+                        data: {
+                            firstname: firstname,
+                            lastname: lastname
+                        },
+                        cache: false,
+                        success: function(data) {
+                            var test = data;
+                            localStorage.setItem("nom", firstname);
+                            localStorage.setItem("cognom", lastname);
+                        }
+                    })
+                } else {
+                    alert("Please fill all fields.");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="first name" id="name">
+    <input type="text" placeholder="last name" id="last">
+    <button id="sub">Submit</button>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

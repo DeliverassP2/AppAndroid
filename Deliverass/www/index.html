@@ -16,26 +16,23 @@
     <script src="https://kit.fontawesome.com/69fb3d2fdc.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
     <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script> -->
     <title>Hello World</title>
 </head>
 
 <body>
     <img src="img/Logotip.png" class="logo-main" />
     <div class="formulari">
-        <form id="form">
+        <form>
             <label for="lname">DNI</label>
-            <input type="text" id="id_user" name="id_user" placeholder="Escriu el teu DNI..">
+            <input type="text" id="id" placeholder="Escriu el teu DNI..">
 
             <label for="lname">CONTRASENYA</label>
-            <input type="password" id="password" name="pwd" autocomplete="on" placeholder="Escriu la teva contrasenya..">
-            <div class="session">
-                <a href="registre.html">
-                    <input type="button" id="b2" value="REGISTRA'T">
-                </a>
-                <input type="submit" id="b1" value="ACCEDIR">
-                <!-- <button id="loginButton" onclick="loginCredencials()">Login</button> -->
-            </div>
+            <input type="password" id="password" placeholder="Escriu la teva contrasenya..">
+
+            <input type="button" id="b1" value="ACCEDIR">
         </form>
+        <button id="b2" onclick="window.open('registre.html');">REGISTRA´T</button>
         <button id="myBtn"><i class="fas fa-universal-access"></i>ACCESSIBILITAT</button>
         <div id="myModal" class="modal">
 
@@ -50,7 +47,7 @@
                     <button role="button" id="increasetext">
                         <span>AUGMENTAR</span>
                     </button>
-                    <br /><br /><br /><span class="titols_botons">MIDA DE LA FONT<br><br />
+                    <br /><br /><br /><span class="titols_botons">MIDA DE LA FONT</br><br />
                         <button role="button" id="vision">
                             <span>TEMA CLAR</span>
                     </button>
@@ -64,29 +61,11 @@
         <!-- <a href="menu.html">ACCEDIR</a> -->
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#b1').click(function() {
-                var user = $('#id_user').val();
-                var pass = $('#password').val();
-                $.post("http://192.168.1.203/login.php", {
-                    id: user,
-                    password: pass
-                }, function(data) {
-                    if (data == true) {
-                        window.location.href = "menu.html";
-                    } else {
-                        alert("Usuario o contraseña incorrectos");
-                    }
-                });
-            });
-        });
-    </script>
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
     <script src="js/login.js"></script>
     <script src="js/accessibilitat.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </body>
 
 </html>

@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/69fb3d2fdc.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/pedido.css">
     <title>Perfil</title>
 </head>
@@ -62,6 +62,44 @@
 
 
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#confirmar").click(function() {;
+                var pobF = $("#pobF").val();
+                var pes = $("#pes").val();
+                var id = localStorage.getItem("id");
+                if ($.trim(pobF).length > 0 && $.trim(pes).length > 0) {
+                    event.preventDefault();
+                    $.ajax({
+                        type: "POST",
+                        crossDomain: true,
+                        url: "http://192.168.1.203/pedido.php",
+                        data: {
+                            direccio: pobF,
+                            pes: pes,
+                            id: id
+
+                        },
+                        cache: false,
+                        success: function(data) {
+
+                            if (data == "success") {
+                                alert(data);
+                                //alert("Pedido realitzat correctament! Ara passará per una revisió per part del nostre equip i una confirmació de la comanda.");
+                                window.location.href = "perfilClient.html";
+                            } else {
+                                alert(data);
+                                alert("Credencials incorrectes!");
+
+                            }
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+    <script src="cordova.js"></script>
 </body>
 
 </html>
